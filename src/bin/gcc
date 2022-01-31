@@ -1,3 +1,7 @@
 #!/usr/bin/env bash
 
+export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${SNAP}/shared-bin/usr/lib/x86_64-linux-gnu"
+export C_INCLUDE_PATH="${C_INCLUDE_PATH}:${SNAP}/shared-bin/usr/include:${SNAP}/shared-bin/usr/include/x86_64-linux-gnu"
+
+eval $SNAP/shared-bin/sbin/ldconfig -C ${SNAP}/shared-bin/etc/ld.so.cache ${SNAP}/shared-bin/usr/lib/x86_64-linux-gnu
 eval $SNAP/shared-bin/usr/bin/gcc $@

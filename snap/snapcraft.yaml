@@ -32,6 +32,7 @@ slots:
         - $SNAP/etc
         - $SNAP/lib
         - $SNAP/usr
+        - $SNAP/sbin
 
 parts:
   home-assistant-toolbox:
@@ -41,3 +42,5 @@ parts:
     stage-packages:
       - curl
       - build-essential
+      - libc-bin
+      - libbluetooth-dev
